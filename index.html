@@ -5,8 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Shoping List</title>
-	<link rel="stylesheet" href="./css/list.css">
-<script src="./js/list.js"></script>
+	<!-- <link rel="stylesheet" href="./css/list.css"> -->
+<script src="script.js"></script>
 </head>
 
 <body>
@@ -15,25 +15,29 @@
 	</header>
 	<main onload="render()">
 		<table id="table1">
-			<caption></caption>
-			<tr>
-				<th>Item Name</th>
-				<th>Quantity</th>
-				<th>Price</th>
-				<th>Total</th> 
-			</tr>
-			<tr>
-        <form id="myinputs">
-          <td><input type="text" id="item-name-input" placeholder="Name"></td>
-          <td><input type="text" id="item-qty-input" placeholder="Qty"></td>
-          <td><input type="text" id="item-price-input" placeholder="Price"></td>
-        </form>
-        <td><button id="add" onclick="addData();">Add</button></td>
-      </tr>
-    </table>
-    <div id="total">Total Ammount is 0 $</div>
-  </main>
-	<footer></footer>
+            <thead>
+			    <tr>
+			    	<th>Item Name</th>
+			    	<!-- <th>Quantity</th> -->
+			    	<th>Price</th>
+			    	<th>Total</th> 
+			    </tr>
+            </thead>
+            <tbody id="add-rows">
+                <tr>
+                    <form id="myinputs">
+                        <td><input type="text" id="item-name-input" placeholder="Name"></td>
+                        <!-- <td><input type="text" id="item-qty-input" placeholder="Qty"></td> -->
+                        <td><input type="number" id="item-price-input" placeholder="Price"></td>
+                    </form>
+                    <td>
+                        <button id="add" onclick="addData()">Add</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="total">Total Ammount is <span id="price-change">0</span> $</div>
+    </main>
 </body>
 
 </html>
